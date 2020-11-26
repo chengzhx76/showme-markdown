@@ -1,0 +1,70 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: rgba(0,0,0,.75);
+  font-family: Lato,Helvetica Neue,Helvetica,sans-serif;
+}
+
+.editor-toolbar {
+  border-top-left-radius: 0 !important;
+}
+
+.icon-medium {
+  font-size: 1.3em;
+  color: #fff;
+}
+.icon-small {
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.editor-toolbar {
+  background-color: #3E8EF7;
+  border: 0 !important;
+  border-radius: 0 !important;
+  button {
+    border: 0 !important;
+    &:hover {
+      background-color: #3880DE !important;
+    }
+    &:focus {
+      outline: none !important;
+    };
+  }
+  .active {
+    background-color: #3880DE !important;
+  }
+}
+
+.EasyMDEContainer {
+  height: 100%;
+  background-color: #F9F9F5;
+  .CodeMirror {
+    height: calc(100% - 90px) !important;
+  }
+  .CodeMirror-wrap {
+    background-color: #F9F9F5;
+  }
+}
+
+.cm-formatting {
+  color: #B7B7B7 !important;
+}
+
+.CodeMirror-line span {
+  font-size: 22px;
+  color: #3F3F3F;
+}
+
+/* 全屏 */
+.editor-preview {
+  background-color: #F9F9F5 !important;
+  font-size: 22px;
+  color: #3F3F3F;
+}
+
