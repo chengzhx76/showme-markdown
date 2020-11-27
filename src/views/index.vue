@@ -18,11 +18,24 @@
       })
 
       onMounted(() => {
+
+
+
         markdown.mde = new EasyMDE(
           {
             element: document.getElementById('element'),
             spellChecker: false,
-            initialValue: 'sssdfssse',
+            initialValue: '查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。优化器的作用就是找到这其中最好的执行计划。优化器的作用就是找到这其中最好的执行计划。优化器的作用就是找到这其中最好的执行计划。优化器的作用就是找到这其中最好的执行计划。优化器的作用就是找到这其中最好的执行计划。优化器的作用就是找到这其中最好的执行计划。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这dd其中最好的执行计划ddddddddddddddddd。',
+            placeholder: "开始书写...",
+            /*previewRender: function(plainText, preview) {
+              console.log(preview)
+              setTimeout(function(){
+                preview.innerHTML = plainText;
+              }, 2500);
+
+              return "加载中...";
+            },*/
+            status: ["autosave", "lines", "words"],
             toolbar: [
               {
                 name: "bold",
@@ -85,10 +98,45 @@
                 action: 'https://github.com/chengzhx76/markdown-editor',
                 className: "fa icon-medium fab fa-github",
                 title: "GitHub",
+              },
+              {
+                name: "format_table",
+                action: function (editor){
+                    // console.log(markdown.mde);
+                    console.log(editor.options);
+                    console.log(editor.gui);
+                    console.log(editor.toolbar_div);
+                    editor = markdown.mde
+                    // https://github.com/Ionaru/easy-markdown-editor/blob/f286a6bae5a1dce943476c90ca77e86285c83da9/src/js/easymde.js#L966
+                    var cm = editor.codemirror;
+                    var wrapper = cm.getWrapperElement();
+                    var preview = wrapper.lastChild;
+                    let html = editor.options.previewRender(editor.value(), preview);
+                    console.log(html)
+                    var selection = editor.codemirror.doc.getSelection();
+                    editor.codemirror.doc.replaceSelection(selection);
+                },
+                className: "fa fa-align-justify",
+                title: "格式化表格",
               }
             ]
           }
         )
+        // console.log(markdown.mde.__proto__)
+
+
+        let toolbar = document.getElementsByClassName("editor-toolbar")
+        console.log(toolbar)
+        let toolbarRight = document.createElement('span')
+        let link = document.createElement('a')
+        let text = document.createTextNode('生成专属链接'); 
+        link.appendChild(text);
+        link.setAttribute('href','https://mp.csdn.net');
+        toolbarRight.appendChild(link)
+        toolbarRight.className = 'editor-toolbar-right'
+        toolbar[0].appendChild(toolbarRight)
+
+
       })
 
       return {

@@ -10,7 +10,7 @@ module.exports = {
       template: 'public/index.html',
       // 在 dist/index.html 的输出
       filename: 'index.html',
-      title: '马克简历'
+      title: '马克vue3jl'
     }
   },
   chainWebpack: config => {

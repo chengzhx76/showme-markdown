@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>dom追加</title>
+</head>
+<body>
+
+  <div id="aa"><p>haha</p></div>
+
+  <p id="demo">单击按钮创建有文本的按钮</p>
+  <button onclick="addDom()">点我</button>
+
+<script>
+  function addDom() {
+
+    var aa = document.getElementById("aa")
+    // alert(aa.innerHTML)
+
+    var span = document.createElement('span'); 
+    var wowo = document.createTextNode('wowo。'); 
+    span.appendChild(wowo);
+
+    console.log(span)
+
+
+    aa.appendChild(span);
+    // aa.innerHTML = span.innerHTML
+
+
+
+    /*var newElement = document.createElement('div'); 
+    var newText = document.createTextNode('这是新建立 div 中的文字。'); 
+    newElement.appendChild(newText);
+    newElement.id = 'newDiv'; 
+    // newElement.setAttribute('name ','newDivName');
+    newElement.className = 'newDivClass'; 
+    newElement.style.width = '300px'; 
+    newElement.style.height = '200px'; 
+    newElement.style.margin = '0 auto'; 
+    newElement.style.border = '1px solid #DDD'; 
+    document.body.appendChild(newElement);*/
+  }
+</script>
+
+</body>
+</html>

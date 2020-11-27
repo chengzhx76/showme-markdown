@@ -10,10 +10,6 @@ body {
   font-family: Lato,Helvetica Neue,Helvetica,sans-serif;
 }
 
-.editor-toolbar {
-  border-top-left-radius: 0 !important;
-}
-
 .icon-medium {
   font-size: 1.3em;
   color: #fff;
@@ -24,31 +20,87 @@ body {
 }
 
 .editor-toolbar {
-  background-color: #3E8EF7;
+  height: 45px;
+  width: 100%;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   border: 0 !important;
   border-radius: 0 !important;
-  button {
-    border: 0 !important;
-    &:hover {
-      background-color: #3880DE !important;
+  background: url(https://g.csdnimg.cn/common/csdn-toolbar/images/toolbar_bg_dark.png) no-repeat center center;
+  background-size: cover;
+  &::after, &::before {
+    margin-bottom: 0 !important;
+    display: inline !important;
+    height: 0 !important;
+    content: none !important;
+  }
+  .editor-toolbar-warp {
+    display: block;
+    float: left;
+    // margin-bottom: 10px;
+    button {
+      border: 0 !important;
+      margin: 0 3px !important;
+      &:hover {
+        background-color: #333333 !important;
+      }
+      &:focus {
+        outline: none !important;
+      };
     }
-    &:focus {
-      outline: none !important;
-    };
+    .active {
+      background-color: #333333 !important;
+    }
   }
-  .active {
-    background-color: #3880DE !important;
+
+  .editor-toolbar-right {
+    display: block;
+    float: right;
+    margin-right: 45px;
+    a {
+      width: 145px;
+      height: 32px;
+      float: right;
+      display: block;
+      line-height: 32px;
+      text-align: center;
+      color: #fff;
+      border-radius: 16px;
+      text-decoration: none;
+      background: linear-gradient(92deg, #ffba40 0, #ff503e 37%, #ff2f50 81%, #ff1b40 100%);
+    }
   }
+
 }
 
 .EasyMDEContainer {
   height: 100%;
   background-color: #F9F9F5;
-  .CodeMirror {
-    height: calc(100% - 90px) !important;
-  }
   .CodeMirror-wrap {
+    // height: calc(100% - 90px) !important;
+    padding-top: 55px !important;
+    border: none !important;
     background-color: #F9F9F5;
+
+    // 文本居中
+    .CodeMirror-scroll {
+      width: 60%;
+      margin: 0 auto;
+      overflow: hidden !important;
+      .CodeMirror-line span {
+        font-size: 22px;
+        color: #3F3F3F;
+      }
+
+      .CodeMirror-placeholder {
+        font-size: 20px !important;
+      }
+    }
   }
 }
 
@@ -56,15 +108,24 @@ body {
   color: #B7B7B7 !important;
 }
 
-.CodeMirror-line span {
-  font-size: 22px;
-  color: #3F3F3F;
-}
-
 /* 全屏 */
 .editor-preview {
-  background-color: #F9F9F5 !important;
   font-size: 22px;
   color: #3F3F3F;
+  padding-top: 45px !important;
+  background-color: #F9F9F5 !important;
+  .editor-preview-warp {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
 
+.editor-statusbar {
+  height: 30px;
+  width: 200px;
+  line-height: 30px;
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  z-index: 99;
+}
