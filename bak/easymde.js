@@ -976,6 +976,7 @@ function togglePreview(editor) {
         toggleSideBySide(editor);
 
     if (!preview || !/editor-preview-full/.test(preview.className)) {
+        // 第一次从编辑 -> 预览
 
         preview = document.createElement('div');
         preview.className = 'editor-preview-full';
@@ -995,15 +996,20 @@ function togglePreview(editor) {
         wrapper.appendChild(preview);
     }
 
+    // 编辑文本框
+    var codeMirrorScroll = preview.previousElementSibling;
+
     if (/editor-preview-active/.test(preview.className)) {
-        preview.className = preview.className.replace(
-            /\s*editor-preview-active\s*/g, ''
-        );
+        // 预览 -> 编辑
+        codeMirrorScroll.style.display = 'block';
+        preview.className = preview.className.replace(/\s*editor-preview-active\s*/g, '');
         if (toolbar) {
             toolbar.className = toolbar.className.replace(/\s*active\s*/g, '');
             toolbar_div.className = toolbar_div.className.replace(/\s*disabled-for-preview*/g, '');
         }
     } else {
+        // 编辑 -> 预览
+        codeMirrorScroll.style.display = 'none';
         // When the preview button is clicked for the first time,
         // give some time for the transition from editor.css to fire and the view to slide from right to left,
         // instead of just appearing.

@@ -58,31 +58,12 @@ body {
     }
   }
 
-  /* .editor-toolbar-right {
-    display: block;
-    float: right;
-    margin-right: 45px;
-    a {
-      width: 145px;
-      height: 32px;
-      float: right;
-      display: block;
-      line-height: 32px;
-      text-align: center;
-      color: #fff;
-      border-radius: 16px;
-      text-decoration: none;
-      background: linear-gradient(92deg, #ffba40 0, #ff503e 37%, #ff2f50 81%, #ff1b40 100%);
-    }
-  } */
-
 }
 
 .EasyMDEContainer {
   height: 100%;
   background-color: #F9F9F5;
   .CodeMirror-wrap {
-    // height: calc(100% - 90px) !important;
     padding-top: 55px !important;
     border: none !important;
     background-color: #F9F9F5;
@@ -93,8 +74,8 @@ body {
       margin: 0 auto;
       overflow: hidden !important;
       .CodeMirror-line span {
-        font-size: 22px;
-        color: #3F3F3F;
+        font-size: 18px;
+        color: #2C3E50;
       }
 
       .CodeMirror-placeholder {
@@ -110,14 +91,18 @@ body {
 
 /* 全屏 */
 .editor-preview {
-  font-size: 22px;
-  color: #3F3F3F;
+  font-size: 18px;
+  color: #2C3E50;
   padding-top: 45px !important;
   background-color: #F9F9F5 !important;
   .editor-preview-warp {
     width: 60%;
     margin: 0 auto;
   }
+}
+
+.editor-preview-full {
+  position: static !important;
 }
 
 .editor-statusbar {
@@ -128,4 +113,45 @@ body {
   bottom: 0;
   right: 10px;
   z-index: 99;
+}
+
+// 编辑区内容定制
+.CodeMirror-scroll {
+  .cm-quote {
+    color: #4271AE !important;
+    font-style: normal !important;
+  }
+}
+
+
+
+// 预览内容定制
+.editor-preview {
+  a {
+    color: #08c;
+    text-decoration: none;
+    &:hover {
+      color: #5BA4E5;
+      text-decoration: underline;
+    }
+  }
+
+  hr {
+    border: 0;
+    border-bottom: 1px dashed #cfcfcf;
+    margin: 30px 0;
+  }
+
+  blockquote {
+    font-size: 18px;
+    padding: 3px 5px;
+    margin: 0 0 20px;
+    background: none repeat scroll 0 0 rgba(102,128,153,.05);
+    border-left: 15px solid #D6DBDF;
+    li {
+      height: 25px;
+      line-height: 25px;
+    }
+  }
+
 }
