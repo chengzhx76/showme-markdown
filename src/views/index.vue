@@ -1,25 +1,29 @@
 <template>
   <div class="easy-markdown">
-    <div class="markdown"></div>
     <textarea id="element"></textarea>
+    
+    <div class="more">
+      <div class="button templet" @click="openTemplet">模版</div>
+      <div class="button gen-link" @click="genLink">生成专属链接</div>
+    </div>
+    <div class="modal"  @click="closeModal" v-show="modalState"></div>
   </div>
 </template>
 
 <script>
-  import { reactive, onMounted } from 'vue'
+  import { reactive, onMounted, ref } from 'vue'
 
   import EasyMDE from 'easymde'
 
   export default {
     name: 'easy-markdown',
     setup() {
+      const modalState = ref(false);
       const markdown = reactive({
         mde: null
       })
 
       onMounted(() => {
-
-
 
         markdown.mde = new EasyMDE(
           {
@@ -27,14 +31,6 @@
             spellChecker: false,
             initialValue: '查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。优化器的作用就是找到这其中最好的执行计划。优化器的作用就是找到这其中最好的执行计划。优化器的作用就是找到这其中最好的执行计划。优化器的作用就是找到这其中最好的执行计划。优化器的作用就是找到这其中最好的执行计划。优化器的作用就是找到这其中最好的执行计划。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这其中最好的执行计划。查询优化器会将解析树转化成执行计划。一条查询可以有多种执行方法，最后都是返回相同结果。优化器的作用就是找到这dd其中最好的执行计划ddddddddddddddddd。',
             placeholder: "开始书写...",
-            /*previewRender: function(plainText, preview) {
-              console.log(preview)
-              setTimeout(function(){
-                preview.innerHTML = plainText;
-              }, 2500);
-
-              return "加载中...";
-            },*/
             status: ["autosave", "lines", "words"],
             toolbar: [
               {
@@ -124,9 +120,10 @@
         )
         // console.log(markdown.mde.__proto__)
 
+        markdown.mde.togglePreview()
 
-        let toolbar = document.getElementsByClassName("editor-toolbar")
-        console.log(toolbar)
+
+        /*let toolbar = document.getElementsByClassName("editor-toolbar")
         let toolbarRight = document.createElement('span')
         let link = document.createElement('a')
         let text = document.createTextNode('生成专属链接'); 
@@ -134,13 +131,27 @@
         link.setAttribute('href','https://mp.csdn.net');
         toolbarRight.appendChild(link)
         toolbarRight.className = 'editor-toolbar-right'
-        toolbar[0].appendChild(toolbarRight)
-
-
+        toolbar[0].appendChild(toolbarRight)*/
       })
 
+      function openTemplet() {
+        modalState.value = true
+      }
+
+      function closeModal() {
+        modalState.value = false
+      }
+      
+      function genLink() {
+        modalState.value = true
+      }
+
       return {
-        markdown
+        markdown,
+        modalState,
+        closeModal,
+        openTemplet,
+        genLink
       }
     }
   }
@@ -150,5 +161,41 @@
   @import "../styles/easymde.css";
   .easy-markdown {
     height: 100%;
+  }
+  .more {
+    height: 45px;
+    width: 260px;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    .button {
+      height: 32px;
+      line-height: 32px;
+      color: #fff;
+      border-radius: 16px;
+      background: linear-gradient(92deg, #ffba40 0, #ff503e 37%, #ff2f50 81%, #ff1b40 100%);
+    }
+    .templet {
+      width: 40px;
+      padding: 0 15px;
+    }
+    .gen-link {
+      width: 145px;
+      text-align: center;
+      margin-left: 15px;
+    }
+  }
+  .modal {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 0.5;
+    background-color: #000;
   }
 </style>
