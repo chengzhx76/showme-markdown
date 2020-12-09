@@ -353,7 +353,6 @@ function toggleFullScreen(editor) {
         }
     }
 
-
     // Update toolbar class
     if (!/fullscreen/.test(editor.toolbar_div.className)) {
         editor.toolbar_div.className += ' fullscreen';
@@ -906,7 +905,7 @@ function toggleSideBySide(editor) {
         // instead of just appearing.
         setTimeout(function () {
             if (!cm.getOption('fullScreen')) {
-                if (editor.options.sideBySideFullscreen === false) {
+                if (!editor.options.sideBySideFullscreen) {
                     cm.setOption('sideBySideNoFullscreen', true);
                     noFullscreenItems.forEach(function(el) {
                         addNoFullscreenClass(el);
@@ -924,6 +923,11 @@ function toggleSideBySide(editor) {
 
     // Hide normal preview if active
     var previewNormal = wrapper.lastChild;
+
+    // bycheng
+    var codeMirrorScroll = previewNormal.previousElementSibling;
+    codeMirrorScroll.style.display = 'block';
+
     if (/editor-preview-active/.test(previewNormal.className)) {
         previewNormal.className = previewNormal.className.replace(
             /\s*editor-preview-active\s*/g, ''
@@ -996,6 +1000,7 @@ function togglePreview(editor) {
         wrapper.appendChild(preview);
     }
 
+    // bycheng
     // 编辑文本框
     var codeMirrorScroll = preview.previousElementSibling;
 
@@ -2485,7 +2490,7 @@ EasyMDE.prototype.createToolbar = function (items) {
     var bar = document.createElement('div');
     bar.className = 'editor-toolbar';
 
-    // by cheng
+    // bycheng
     var barWarp = document.createElement('span');
     barWarp.className = 'editor-toolbar-warp';
     bar.appendChild(barWarp);

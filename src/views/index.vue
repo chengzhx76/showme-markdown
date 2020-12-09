@@ -38,6 +38,7 @@
               singleLineBreaks: false,
               codeSyntaxHighlighting: true
             },
+            sideBySideFullscreen: false,
             toolbar: [
               {
                 name: "bold",
@@ -88,12 +89,6 @@
                 action: EasyMDE.toggleSideBySide,
                 className: "fa icon-small fa-columns no-disable no-mobile",
                 title: "实时预览"
-              },
-              {
-                name: "fullscreen",
-                action: EasyMDE.toggleFullScreen,
-                className: "fa icon-small fa-arrows-alt no-disable no-mobile",
-                title: "全屏"
               },
               {
                 name: "guide",

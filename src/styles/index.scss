@@ -8,7 +8,8 @@ body, div, span, p, ul, ol, li {
 }
 
 body {
-  height: 100%;
+  height: calc(100% - 45px);;
+  margin-top: 45px;
   color: rgba(0,0,0,.75);
   font-family: Lato,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -66,11 +67,15 @@ body {
 .EasyMDEContainer {
   height: 100%;
   background-color: #F9F9F5;
+  .CodeMirror-sided {
+    .CodeMirror-scroll {
+      width: 100% !important;
+    }
+  }
+
   .CodeMirror-wrap {
-    padding-top: 55px !important;
     border: none !important;
     background-color: #F9F9F5;
-
     // 文本居中
     .CodeMirror-scroll {
       width: 60%;
