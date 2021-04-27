@@ -6,7 +6,12 @@
       <div class="button templet" @click="openTemplet">模版</div>
       <div class="button gen-link" @click="genLink">生成专属链接</div>
     </div>
-    <div class="modal"  @click="closeModal" v-show="modalState"></div>
+    <div class="modal" @click="closeModal" v-show="modalState"></div>
+
+    <div class="record">
+      <p>网站备案信息：<a href="http://beian.miit.gov.cn/" target="_blank">京ICP备20005639号-1</a></p>
+    </div>
+
   </div>
 </template>
 
@@ -198,5 +203,22 @@
     z-index: 999;
     opacity: 0.5;
     background-color: #000;
+  }
+  .record {
+    width: 100%;
+    position: fixed;
+    bottom: 5px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    p {
+      width: 300px;
+      display: inline-block;
+      font-size: 14px;
+      color: #2c3e50;
+      a {
+        color: #3884fe;
+      }
+    }
   }
 </style>
